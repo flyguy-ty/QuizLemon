@@ -23,3 +23,8 @@
 2022-03-09 00:59:21 INFO  QuestionAspect:46 - List spring.question.QuestionController.getQuestion()
 2022-03-09 01:04:05 INFO  QuizAspect:46 - List spring.quiz.QuizController.getQuiz()
 2022-03-09 01:05:10 INFO  QuizAspect:46 - List spring.quiz.QuizController.getQuiz()
+2022-03-09 12:39:32 INFO  QuestionAspect:46 - List spring.question.QuestionController.getQuestion()
+2022-03-09 12:39:43 INFO  QuizAspect:46 - List spring.quiz.QuizController.getQuiz()
+2022-03-09 12:39:54 INFO  PlayerAspect:46 - List spring.player.PlayerController.getPlayer()
+2022-03-09 12:41:51 INFO  QuizAspect:46 - List spring.quiz.QuizController.getQuiz()
+2022-03-09 17:01:02 INFO  QuestionAspect:46 - List spring.question.QuestionController.getQuestion()
