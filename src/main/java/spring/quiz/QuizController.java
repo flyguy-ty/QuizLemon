@@ -19,7 +19,7 @@ public class QuizController {
     public QuizController(QuizService quizService){
         this.quizService = quizService;
     }
-    @GetMapping("quiz")
+    @GetMapping("get")
     public List<Quiz> getQuiz(){
         return quizService.findAllQuiz();
     }

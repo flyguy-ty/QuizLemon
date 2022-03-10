@@ -18,7 +18,7 @@ public class QuestionController {
     public QuestionController(QuestionService questionService){
         this.questionService = questionService;
     }
-    @GetMapping()
+    @GetMapping("get")
     public List<Question> getQuestion(){
         return questionService.findAllQuestion();
     }

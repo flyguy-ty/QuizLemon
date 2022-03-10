@@ -18,7 +18,7 @@ public class PlayerController {
     public PlayerController(PlayerService playerService){
         this.playerService = playerService;
     }
-    @GetMapping("player")
+    @GetMapping("get")
     public List<Player> getPlayer(){
         return playerService.findAllPlayer();
     }
@@ -26,7 +26,7 @@ public class PlayerController {
     public Player getPlayerByName(@PathVariable String name){
         return playerService.findPlayerByName(name);
     }
-    @PostMapping("player")
+    @PostMapping("post")
     public Player postPlayer(@RequestBody Player player){
         return playerService.savePlayer(player);
     }

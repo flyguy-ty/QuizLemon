@@ -1,4 +1,4 @@
-package spring.player;
+package spring.score;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -7,10 +7,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import spring.score.Score;
+import spring.player.Player;
+import spring.quiz.Quiz;
 
 import javax.persistence.*;
-import java.util.List;
 
 @JsonIdentityInfo(
         //this is to stop recursive hibernate joins
@@ -19,23 +19,26 @@ import java.util.List;
 )
 
 @Entity
-@Table(name="Player")
+@Table(name="Score")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Player {
+public class Score {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private int id;
-    @Column
-    private String name;
-    @Column
-    private String password;
-    @Column
-    private int power;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name="player")
-    private List<Score> score;
+    private Player player;
+
+
+    @ManyToOne
+    @JoinColumn(name="quiz")
+    private Quiz quiz;
+
+    @Column
+    private int score;
+
 }
