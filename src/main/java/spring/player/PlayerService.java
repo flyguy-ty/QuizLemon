@@ -37,4 +37,7 @@ public class PlayerService {
         return playerRepository.findAllByPower(power);
     }
 
+    public List<Player> deleteByid(int id) {
+        return playerRepository.deleteByid(id);
+    }
 }

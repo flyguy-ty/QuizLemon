@@ -16,7 +16,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @ToString
 public class Question {
-//    Foreign key is quiz_id. How do this?
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private int id;
     @Column
@@ -31,7 +31,9 @@ public class Question {
     private String choice4;
     @Column
     private int correct;
-    @ManyToOne
+    @Column
+    private int points;
+    @ManyToOne(fetch=FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "quiz_id")
     @JsonIgnoreProperties(value = "question")
     public Quiz quiz;

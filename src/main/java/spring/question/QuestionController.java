@@ -30,10 +30,15 @@ public class QuestionController {
     public Question postQuestion(@RequestBody Question question){
         return questionService.saveQuestion(question);
     }
-    @GetMapping("question_id/{question_id}")
+    @GetMapping("question_id/{id}")
     public List<Question> getQuestionByID(@PathVariable int id){
         return questionService.findAllQuestionByID(id);
     }
+    @DeleteMapping("delete/{id}")
+    public List<Question> deleteQuestionbyID(@PathVariable int id){
+        return questionService.deleteQuestionByID(id);
+    }
+
     /*you're likely to also need
     a delete mapping
     @DeleteMapping

@@ -34,6 +34,10 @@ public class PlayerController {
     public List<Player> getPlayerByPower(@PathVariable int pow){
         return playerService.findAllPlayerByPower(pow);
     }
+    @DeleteMapping("delete/{id}")
+    public List<Player> deletePlayerByID(@PathVariable int id){
+        return playerService.deleteByid(id);
+    }
     /*you're likely to also need
     a delete mapping
     @DeleteMapping

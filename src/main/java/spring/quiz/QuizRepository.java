@@ -2,6 +2,7 @@ package spring.quiz;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import spring.player.Player;
+import spring.question.Question;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -24,6 +25,8 @@ public interface QuizRepository extends JpaRepository<Quiz, Integer> {
     Quiz findByTitle(String quiz);
 
     List<Quiz> findAllByid(int id);
+
+    List<Quiz> deleteByid(int id);
 
 
 }

@@ -37,4 +37,7 @@ public class QuizService {
         return quizRepository.findAllByid(id);
     }
 
+    public List<Quiz> deleteQuizByID(int id) {
+        return quizRepository.deleteByid(id);
+    }
 }

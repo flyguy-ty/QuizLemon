@@ -25,6 +25,7 @@ public interface PlayerRepository extends JpaRepository<Player, Integer> {
 
     List<Player> findAllByPower(int power);
 
+    List<Player> deleteByid(int id);
 }
 
 /*

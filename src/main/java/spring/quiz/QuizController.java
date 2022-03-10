@@ -2,6 +2,7 @@ package spring.quiz;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import spring.question.Question;
 
 import java.util.List;
 
@@ -33,6 +34,10 @@ public class QuizController {
     @GetMapping("quiz_id/{quiz_id}")
     public List<Quiz> getQuizByID(@PathVariable int id){
         return quizService.findAllQuizByID(id);
+    }
+    @DeleteMapping("delete/{id}")
+    public List<Quiz> deleteQuestionbyID(@PathVariable int id){
+        return quizService.deleteQuizByID(id);
     }
     /*you're likely to also need
     a delete mapping

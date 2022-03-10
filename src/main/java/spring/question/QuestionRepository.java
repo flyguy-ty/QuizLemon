@@ -1,6 +1,7 @@
 package spring.question;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import spring.player.Player;
 
 import javax.transaction.Transactional;
@@ -22,10 +23,11 @@ public interface QuestionRepository extends JpaRepository<Question, Integer> {
 
     //@Query("from Digimon where name = :name")
     Question findByText(String question);
-
+    @Query("from Question where id = :id")
     List<Question> findAllByid(int id);
 
-
+    //@Query("from Question where id = :id")
+    List<Question> deleteByid(int id);
 }
 
 /*

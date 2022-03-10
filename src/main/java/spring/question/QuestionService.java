@@ -40,4 +40,7 @@ public class QuestionService {
         return questionRepository.findAllByid(id);
     }
 
+    public List<Question> deleteQuestionByID(int id) {
+        return questionRepository.deleteByid(id);
+    }
 }

@@ -1,10 +1,7 @@
 package spring.quiz;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import spring.question.Question;
 
 import javax.persistence.*;
@@ -17,11 +14,12 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 public class Quiz {
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private int id;
     @Column
     private String title;
-    @OneToMany(fetch=FetchType.EAGER)
+    @OneToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name="quiz_id")
     @JsonIgnoreProperties(value="quiz")
     private List<Question> questions;

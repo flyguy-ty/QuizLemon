@@ -5,10 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="Player")
@@ -17,6 +14,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @ToString
 public class Player {
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private int id;
     @Column
