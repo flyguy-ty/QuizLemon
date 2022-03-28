@@ -33,9 +33,9 @@ public class PlayerService {
     public Player savePlayer(Player player){
         return playerRepository.save(player);
     }
-    public List<Player> findAllPlayerByPower(int power){
+    /*public List<Player> findAllPlayerByPower(int power){
         return playerRepository.findAllByPower(power);
-    }
+    }*/
 
     public List<Player> deleteByid(int id) {
         return playerRepository.deleteByid(id);

@@ -32,8 +32,10 @@ public class Player {
     private String name;
     @Column
     private String password;
-    @Column
+   /*@Column
     private int power;
+
+    */
 
     @OneToMany
     @JoinColumn(name="player")

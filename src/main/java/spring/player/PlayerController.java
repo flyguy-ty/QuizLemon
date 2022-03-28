@@ -30,10 +30,12 @@ public class PlayerController {
     public Player postPlayer(@RequestBody Player player){
         return playerService.savePlayer(player);
     }
-    @GetMapping("power/{pow}")
+   /* @GetMapping("power/{pow}")
     public List<Player> getPlayerByPower(@PathVariable int pow){
         return playerService.findAllPlayerByPower(pow);
     }
+
+    */
     @DeleteMapping("delete/{id}")
     public List<Player> deletePlayerByID(@PathVariable int id){
         return playerService.deleteByid(id);

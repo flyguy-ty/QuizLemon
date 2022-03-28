@@ -23,7 +23,7 @@ public interface PlayerRepository extends JpaRepository<Player, Integer> {
     //@Query("from Digimon where name = :name")
     Player findByName(String name);
 
-    List<Player> findAllByPower(int power);
+    //List<Player> findAllByPower(int power);
 
     List<Player> deleteByid(int id);
 }
